@@ -7,9 +7,8 @@
 	<artifactId>notification-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<name>notification-service</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Service for handling notifications</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -55,6 +54,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
