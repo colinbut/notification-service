@@ -16,7 +16,7 @@ public class UserNotificationReceiver {
 
     private static final Logger LOG = LoggerFactory.getLogger(UserNotificationReceiver.class);
 
-    @JmsListener(destination = "user-notification-queue")
+    @JmsListener(destination = "${notification.user.queue.name}")
     public void receiveMessage(UserDto userDto){
         LOG.info("Received user notification message from user-notification-queue");
 
