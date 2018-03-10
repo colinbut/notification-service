@@ -18,9 +18,12 @@ public class UserNotificationReceiver {
 
     @JmsListener(destination = "${notification.user.queue.name}")
     public void receiveMessage(UserDto userDto){
-        LOG.info("Received user notification message from user-notification-queue");
+        LOG.info("Received user notification message from user notification queue");
 
         // TODO here we're going to process however we like
         // not going to implement this part - leaving it as future work to do
+        // for now just log it
+
+        LOG.info("Received: {}", userDto);
     }
 }
