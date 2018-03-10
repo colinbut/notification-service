@@ -6,24 +6,22 @@
 package com.mycompany.notification.notificationservice.jms;
 
 import com.mycompany.notification.notificationservice.dto.UserDto;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class UserNotificationReceiver {
-
-    private static final Logger LOG = LoggerFactory.getLogger(UserNotificationReceiver.class);
 
     @JmsListener(destination = "${notification.user.queue.name}")
     public void receiveMessage(UserDto userDto){
-        LOG.info("Received user notification message from user notification queue");
+        log.info("Received user notification message from user notification queue");
 
         // TODO here we're going to process however we like
         // not going to implement this part - leaving it as future work to do
         // for now just log it
 
-        LOG.info("Received: {}", userDto);
+        log.info("Received: {}", userDto);
     }
 }
