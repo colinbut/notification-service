@@ -13,6 +13,7 @@ public class UserDto {
     private String firstname;
     private String secondname;
     private Date dob;
+    private String email;
     private AddressDto address;
 
     public String getSsn() {
@@ -45,6 +46,14 @@ public class UserDto {
 
     public void setDob(Date dob) {
         this.dob = dob;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public AddressDto getAddress() {
